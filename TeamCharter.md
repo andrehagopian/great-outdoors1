@@ -18,7 +18,7 @@
 
     Name: Andre Hagopian
     Strengths: 
-    Weaknesses: 
+    Weaknesses: Procrastination, patience, 
     Role:
 
 ### Member 2
