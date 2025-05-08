@@ -24,9 +24,9 @@
 ### Member 2
 
     Name: Jocelyn Peterson
-    Strengths:
-    Weaknesses:
-    Role:
+    Strengths: Collaboration, communication, adaptability, patience, and empathetic.
+    Weaknesses: Multitasking, time management, and taking the lead.  
+    Role: TBD
 
 ### Member 3
 
