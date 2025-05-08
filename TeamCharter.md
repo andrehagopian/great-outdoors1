@@ -37,10 +37,10 @@
 
 ## 3. Core Values
 
-    Value 1: Responsibility 
-    Value 2: Reliability 
-    Value 3: Accoutability 
-    Value 4: Open Communication
+    Value 1: We take ownership in our deliverables.
+    Value 2: We are expected to complete our independent tasks.
+    Value 3: We work collectively to complete tasks and support one another
+    Value 4: Keeping an open communication between each other
 
 (Discuss and finalize the top 4-5 values you agree on)
 
@@ -55,7 +55,7 @@
 
     Success Metric 1: Meeting our delivarible deadlines
     Success Metric 2: Meeting the client's goals and expectation with throughness 
-    Success Metric 3: 
+    Success Metric 3: Having a well-organized, neat, and readable code
 
 ## 6. Roles and Responsibilities
 
@@ -73,6 +73,6 @@
 
 ## 7. Standards of Quality
 
-    Quality Standard 1: Timeliness
-    Quality Standard 2: Commitment to quality
-    Quality Standard 3: 
+    Quality Standard 1: Joining the scrum meetings no later than ten minutes late.
+    Quality Standard 2: The amount of work an individual will produce will have less than 15 defects. 
+    Quality Standard 3: We will respond to client inquiries within 24 hours.
