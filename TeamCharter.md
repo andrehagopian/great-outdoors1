@@ -18,7 +18,7 @@
 
     Name: Andre Hagopian
     Strengths: 
-    Weaknesses:
+    Weaknesses: 
     Role:
 
 ### Member 2
@@ -37,31 +37,31 @@
 
 ## 3. Core Values
 
-    Value 1:
-    Value 2:
-    Value 3:
-    Value 4:
+    Value 1: Responsibility 
+    Value 2: Reliability 
+    Value 3: Accoutability 
+    Value 4: Open Communication
 
 (Discuss and finalize the top 4-5 values you agree on)
 
 ## 4. Group Norms
 
-    Communication: How will we communicate? (e.g., daily standups, email updates, Slack)
-    Meeting Frequency: How often will we meet? (e.g., weekly, bi-weekly)
-    Work Style Preferences: How does each person prefer to work? (e.g., quiet time, collaborative sessions)
-    Feedback and Conflict Resolution: How will we give feedback and resolve disagreements?
+    Communication: Microsoft Teams/Whatsapp/Canvas Inbox
+    Meeting Frequency: Twice a week
+    Work Style Preferences: We prefer to work independently at first to understand our assignment and goals, and then come together for collaborative sessions. Using organization tools as necessary. An individual must inform the team beforehand if they aren't going to be able to attend the meeting. If an individual wasn't able to attend the planned meeting, they are expected to go through the shared agenda to understand what was discussed in the meeting, and each person's tasks and responsibilities.
+    Feedback and Conflict Resolution: When requiring an immediate feedback, we'd use Whatsapp. Otherwise, we'd express our opinions or feedbacks through Canvas Inbox or Microsoft Teams. 
 
 ## 5. Metrics of Success
 
-    Success Metric 1:
-    Success Metric 2:
-    Success Metric 3:
+    Success Metric 1: Meeting our delivarible deadlines
+    Success Metric 2: Meeting the client's goals and expectation with throughness 
+    Success Metric 3: 
 
 ## 6. Roles and Responsibilities
 
     Role 1:
     Responsibilities:
-    Person(s) responsible:
+    Person(s) responsible: 
     Role 2:
     Responsibilities:
     Person(s) responsible:
@@ -73,6 +73,6 @@
 
 ## 7. Standards of Quality
 
-    Quality Standard 1: (e.g., Timeliness)
-    Quality Standard 2: (e.g., Originality)
-    Quality Standard 3: (e.g., Depth of Research)
+    Quality Standard 1: Timeliness
+    Quality Standard 2: Commitment to quality
+    Quality Standard 3: 
