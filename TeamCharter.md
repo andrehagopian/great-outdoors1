@@ -3,8 +3,9 @@
 
     Project Name: The Great Outdoors Website
     
-    Project Description: Create a website for a Nonprofit Organization to engage nature lovers, families, travelers, students, volunteers. 
-    The purpose of the website is to promote outdoor exploration in the Pacific Northwest through detailed, engaging content. 
+    Project Description: Create a website for a Nonprofit Organization to engage nature lovers, 
+    families, travelers, students, volunteers. The purpose of the website is to promote outdoor 
+    exploration in the Pacific Northwest through detailed, engaging content. 
     
         Website Features:
         -Separate pages for Ferry Rides, Parks, Hikes, Beaches, Kayaking, Boating
