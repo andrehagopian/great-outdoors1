@@ -16,7 +16,7 @@
         -Blog/News Section for updates on outdoor activities and environmental tips
         -Initially English language only
         -Nature-themed design, but open to developer suggestions
-        ** Note:** Client has provided basic pictures and text provided for content
+        **Note:** Client has provided basic pictures and text provided for content
     
     Project Timeline:
     (Start and end dates, major phases/milestones)
