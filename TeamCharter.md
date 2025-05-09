@@ -41,7 +41,7 @@
     Name: Jocelyn Peterson
     Strengths: Collaboration, communication, adaptability, patience, and empathetic.
     Weaknesses: Multitasking, time management, and taking the lead.  
-    Role: TBD
+    Role: QA/Tester
 
 ### Member 3
 
@@ -57,14 +57,16 @@
     Value 3: We work collectively to complete tasks and support one another
     Value 4: Keeping an open communication between each other
 
-(Discuss and finalize the top 4-5 values you agree on)
-
 ## 4. Group Norms
 
     Communication: Microsoft Teams/Whatsapp/Canvas Inbox
     Meeting Frequency: Twice a week
-    Work Style Preferences: We prefer to work independently at first to understand our assignment and goals, and then come together for collaborative sessions. Using organization tools as necessary. An individual must inform the team beforehand if they aren't going to be able to attend the meeting. If an individual wasn't able to attend the planned meeting, they are expected to go through the shared agenda to understand what was discussed in the meeting, and each person's tasks and responsibilities.
-    Feedback and Conflict Resolution: When requiring an immediate feedback, we'd use Whatsapp. Otherwise, we'd express our opinions or feedbacks through Canvas Inbox or Microsoft Teams. 
+    Work Style Preferences: We prefer to work independently at first to understand our assignment and goals, and then come together for collaborative sessions.
+    Using organization tools as necessary. An individual must inform the team beforehand if they aren't going to be able to attend the meeting. If an individual
+    wasn't able to attend the planned meeting, they are expected to go through the shared agenda to understand what was discussed in the meeting, and each
+    person's tasks and responsibilities.
+    Feedback and Conflict Resolution: When requiring an immediate feedback, we'd use Whatsapp. Otherwise, we'd express our opinions or feedbacks through Canvas
+    Inbox or Microsoft Teams. 
 
 ## 5. Metrics of Success
 
@@ -74,17 +76,17 @@
 
 ## 6. Roles and Responsibilities
 
-    Role 1:
-    Responsibilities:
-    Person(s) responsible: 
-    Role 2:
-    Responsibilities:
-    Person(s) responsible:
-    Role 3:
-    Responsibilities:
-    Person(s) responsible:
+    Role 1: Product Owner
+    Responsibilities: Identify, measure and maximize value throughout a product's lifecycle by managing the Product Backlog.
+    Person(s) responsible: Andre Hagopian
 
-(Include all major and secondary roles within the team)
+    Role 2: Software Developer
+    Responsibilities: Develop software applications using programming languages. 
+    Person(s) responsible: Ephi Molla
+
+    Role 3: QA Tester
+    Responsibilities: Ensure the application works as expected and identify defects that must be fixed. 
+    Person(s) responsible: Jocelyn Peterson
 
 ## 7. Standards of Quality
 
