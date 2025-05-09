@@ -5,17 +5,18 @@
     
     Project Description: Build a website for a Nonprofit Organization to engage nature lovers, families, travelers, students, volunteers. The purpose of the
     website is to promote outdoor exploration in the Pacific Northwest through detailed, engaging content. 
-    Website Features:
-    *Separate pages for Ferry Rides, Parks, Hikes, Beaches, Kayaking, Boating
-    *Filter/Search by activity type, location, season, and difficulty
-    *Calendar/Event Section for seasonal activities and local events
-    *Real-time Alerts for weather, park closures, ferry delays, etc.
-    *Contact Form for inquiries, with messages sent to email
-    *Donation & Membership Options to fund the site
-    *Blog/News Section for updates on outdoor activities and environmental tips
-    *Initially English language only
-    *Nature-themed design, but open to developer suggestions
-     Note: Client has provided basic pictures and text provided for content
+    
+        Website Features:
+        -Separate pages for Ferry Rides, Parks, Hikes, Beaches, Kayaking, Boating
+        -Filter/Search by activity type, location, season, and difficulty
+        -Calendar/Event Section for seasonal activities and local events
+        -Real-time Alerts for weather, park closures, ferry delays, etc.
+        -Contact Form for inquiries, with messages sent to email
+        -Donation & Membership Options to fund the site
+        -Blog/News Section for updates on outdoor activities and environmental tips
+        -Initially English language only
+        -Nature-themed design, but open to developer suggestions
+         **Note:** Client has provided basic pictures and text provided for content
     
     Project Timeline:
     (Start and end dates, major phases/milestones)
