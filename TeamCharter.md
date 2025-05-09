@@ -62,12 +62,12 @@
 
     Communication: Microsoft Teams/Whatsapp/Canvas Inbox
     Meeting Frequency: Twice a week
-    Work Style Preferences: We prefer to work independently at first to understand our assignment and goals, and then come together for collaborative sessions.
-    Using organization tools as necessary. An individual must inform the team beforehand if they aren't going to be able to attend the meeting. If an individual
-    wasn't able to attend the planned meeting, they are expected to go through the shared agenda to understand what was discussed in the meeting, and each
-    person's tasks and responsibilities.
-    Feedback and Conflict Resolution: When requiring an immediate feedback, we'd use Whatsapp. Otherwise, we'd express our opinions or feedbacks through Canvas
-    Inbox or Microsoft Teams. 
+    Work Style Preferences: We prefer to work independently at first to understand our assignment and goals, and then come together 
+    for collaborative sessions. Using organization tools as necessary. An individual must inform the team beforehand if they aren't 
+    going to be able to attend the meeting. If an individual is not able to attend the planned meeting, they are expected to read the 
+    shared agenda to understand what was discussed in the meeting, and each person's tasks and responsibilities.
+    Feedback and Conflict Resolution: When requiring an immediate feedback, we'd use Whatsapp. Otherwise, we'd express our opinions or 
+    feedbacks through Canvas Inbox or Microsoft Teams. 
 
 ## 5. Metrics of Success
 
