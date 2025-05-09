@@ -20,22 +20,30 @@
         **Note:** Client has provided basic pictures and text provided for content
     
     Project Timeline:
-    (Start and end dates, major phases/milestones)
+    Start Date: May 9, 2025
+    End Date: June 12, 2025
+
+    Week 1: Project setup, implement labels and standups, and assign roles.
+    Week 2: Begin development of core pages.
+    Week 3: Add filter/search functionality and event calendar section, and content integration.
+    Week 4: Build out remaining features (real-time alerts, contact form, blog section), and polishing. 
+    Week 5: Final revisions, client feedback, bug fixes, prepare code and content for presentation. 
+    June 12: Present completed site and explain designs, process, and key features. 
+    
     
     Project Goals:
-    (Specific objectives the project aims to achieve)
-        Goal 1: 
-        Goal 2: 
-        Goal 3: 
+        Goal 1: Develop an engaging, user-frienldy website that encourages outdoor exploration in the Pacific Northwest by organizing content into clearly labeled sections for actvities such as ferry rides, parks, hikes, beaches, kayaking, and boating.
+        Goal 2: Implement interactive features such as filter/search tools, a real-time alert system, and an event calendar.
+        Goal 3: Follow an agile, sprint-based development process with regular feedback loops to ensure the website aligns with evolving client needs and vision. 
 
 ## 2. Team Members
 
 ### Member 1
 
     Name: Andre Hagopian
-    Strengths: 
-    Weaknesses: Procrastination, patience, 
-    Role:
+    Strengths: Teamwork, attention to detail, versatility, and multitasking
+    Weaknesses: Procrastination, patience, and time management.
+    Role: Product Owner 
 
 ### Member 2
 
@@ -49,7 +57,7 @@
     Name: Ephi
     Strengths:
     Weaknesses:
-    Role:
+    Role: QA Tester 
 
 ## 3. Core Values
 
