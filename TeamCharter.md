@@ -57,7 +57,7 @@
     Name: Ephi
     Strengths:
     Weaknesses:
-    Role: QA Tester 
+    Role: Software Developer
 
 ## 3. Core Values
 
