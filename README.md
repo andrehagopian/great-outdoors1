@@ -1,2 +1,6 @@
 # PoulNichols.github.io
-#Jocelyn
+## Team Members
+- Andre Hagopian
+- Jocelyn Peterson
+
+
