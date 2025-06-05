@@ -14,12 +14,30 @@
 
 <p id="alttext" style="font-size:20px;"> </p>
 
+<input type="text" id="searchInput" placeholder="Search this page...">
+<button onclick="searchFunction()">Search</button>
+<p id="searchResult"></p>
+
 <ul>
 <li><a href="index.html">Table of Contents</a></li>
 </ul>
 
+<script>
+    function searchFunction() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const bodyText = document.body.innerText.toLowerCase();
+        const result = document.getElementById("searchResult");
+
+        if (input.trim() === "") {
+            result.innerText = "Please enter a keyword.";
+        }else if (bodyText.includes(input)) {
+            result.innerText = `The term "${input}" was found on this page.`;
+        } else {
+            result.innerText = `No results found for "${input}".`;
+        }
+}
+</script>
+
 </body>
-<<<<<<< HEAD
-</html>
-=======
+
 </html>
