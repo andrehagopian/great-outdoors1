@@ -15,6 +15,12 @@
 
 <p id="alttext" style="font-size: 20px"></p>
 
+
+<input type="text" id="searchInput" placeholder="Search this page...">
+<button onclick="searchFunction()">Search</button>
+<p id="searchResult"></p>
+
+
 <section>
     <h2>Discover Washington's Boating Activities</h2>
     <p>Experience the beauty of the Pacific Northwest from the water, whether you're navigating serene lakes, exploring rugged coastal shores, or engaging in exhilarating activities like 
@@ -32,6 +38,23 @@
 <li><a href="index.html">Table of Contents</a></li>
 </ul>
 </nav>
+
+
+<script>
+    function searchFunction() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const bodyText = document.body.innerText.toLowerCase();
+        const result = document.getElementById("searchResult");
+
+        if (input.trim() === "") {
+            result.innerText = "Please enter a keyword.";
+        }else if (bodyText.includes(input)) {
+            result.innerText = `The term "${input}" was found on this page.`;
+        } else {
+            result.innerText = `No results found for "${input}".`;
+        }
+}
+</script>
 
 </body>
 </html>
