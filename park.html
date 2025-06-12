@@ -2,54 +2,327 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<title>Welcome to the Great Outdoors!</title>
-<link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-<script src="scripts/myscripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban & Natural Parks - Recreation Adventure</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EAEDED; /* Muted gray-green */
+            color: #2C3E50;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #3B7745; /* Sage green */
+            color: white;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #A7C7A3; /* Soft moss green */
+        }
+		
+		/* Search Bar */
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1b5e20;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 180px;
+        }
+
+        .search-container button {
+            padding: 8px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-container button:hover {
+            background-color: #2e7d32;
+        }
+
+        #searchResult {
+            color: #1b5e20; /* Dark green */
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            margin: 30px auto;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #3B7745;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #3B7745;
+        }
+
+        .home-button:hover {
+            background-color: #A7C7A3;
+        }
+
+        /* Parks Description Section */
+        .description-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #D4E7C5; /* Muted natural green */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .description-container h2 {
+            color: #3B7745;
+            font-size: 24px;
+        }
+
+        .description-container p {
+            font-size: 18px;
+            color: #2C4A33; /* Earthy forest tone */
+        }
+
+        /* Placeholder Image */
+        .image-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Filter Section */
+        .filter-container {
+            background-color: #D4E7C5;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #3B7745;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #3B7745;
+            border-radius: 5px;
+        }
+
+        .filter-container button {
+            padding: 8px 16px;
+            background-color: #3B7745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-container button:hover {
+            background-color: #2C4A33;
+        }
+
+        /* Parks Blogs Carousel */
+        .carousel-container {
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .carousel-container .detail-box {
+            display: inline-block;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            background-color: #A7C7A3;
+            border: 2px solid #3B7745;
+            margin: 10px;
+        }
+
+        .carousel-container .detail-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-box h3 {
+            color: #3B7745;
+            font-size: 20px;
+        }
+
+        .detail-box p {
+            font-size: 12px;
+            color: #2C4A33;
+        }
+
+        .detail-box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #3B7745;
+        }
+
+        .detail-box a:hover {
+            color: #2C4A33;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3B7745;
+            color: white;
+            padding: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #3B7745;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .contact-button:hover {
+            background-color: #A7C7A3;
+        }
+
+    </style>
 </head>
 <body>
 
-<h1>Retreat in the Park</h1>
+    <!-- Header -->
+    <header>
+        <h1>Urban & Natural Parks - Recreation Adventure</h1>
+        <p>Explore Washington’s parks, greenways, sports fields, and nature trails.</p>
+    </header>
 
-<figure>
-<img src = "images/park.jpg" alt="Park" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-<figcaption>Read Up</figcaption>
-</figure>
-<p id="alttext" style="font-size: 20px;"></p>
+    <!-- Search Bar -->
+	<input type="text" id="searchInput" placeholder="Search this page...">
+	<button onclick="searchFunction()">Search</button>
+	<p id="searchResult"></p>
+	
+    <script>
+        function searchFunction() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const bodyText = document.body.innerText.toLowerCase();
+            const result = document.getElementById("searchResult");
 
-<input type="text" id="searchInput" placeholder="Search this page...">
-<button onclick="searchFunction()">Search</button>
-<p id="searchResult"></p>
-
-<section>
-    <h2>Discover Washington's Parks</h2>
-    <p>Discover Washington State Park's scenic trails, attractions, and recreational activities. Whether you're looking for a family picnic spot or a weekend hiking getaway, there's something for everyone.</p>
-
-    <ul>
-        <li><strong>Olympic National Park:</strong> A UNESCO World Heritage site with beaches, forests, and alpine peaks.</li>
-        <li><strong>Mount Rainier National Park:</strong>Home to glaciers, wildflowers meadows, and the iconic volcano</li>
-        <li><strong>Discovery Park:</strong>Seattle's largest green space with views of Puget Sound.</li>
-    </ul>
-</section>
-
-<ul>
-<li><a href="index.html">Back to Home</a></li>
-</ul>
-
-<script>
-    function searchFunction() {
-        const input = document.getElementById("searchInput").value.toLowerCase();
-        const bodyText = document.body.innerText.toLowerCase();
-        const result = document.getElementById("searchResult");
-
-        if (input.trim() === "") {
-            result.innerText = "Please enter a keyword.";
-        }else if (bodyText.includes(input)) {
-            result.innerText = `The term "${input}" was found on this page.`;
-        } else {
-            result.innerText = `No results found for "${input}".`;
+            if (input.trim() === "") {
+                result.innerText = "Please enter a keyword.";
+            } else if (bodyText.includes(input)) {
+                result.innerText = `The term "${input}" was found on this page.`;
+            } else {
+                result.innerText = `No results found for "${input}".`;
+            }
         }
-}
-</script>
+    </script>
+
+
+    <!-- "Discover Parks & Recreation" Description -->
+    <div class="description-container">
+        <h2>Discover Parks & Recreation</h2>
+        <p>Whether enjoying a city plaza, hiking a forested trail, or playing on a sports field, Washington has diverse recreation areas to explore.</p>
+    </div>
+
+    <!-- Placeholder Image -->
+    <div class="image-container">
+        <img src="images/New Images/park pnw.jpg" alt="Urban & Natural Parks Recreation Adventure">
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+        <h2>Find Your Next Park Adventure</h2>
+        <form action="#" method="GET">
+            <select name="accessibility">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city">
+                <option value="">City</option>
+            </select>
+            <select name="county">
+                <option value="">County</option>
+            </select>
+            <select name="park-type">
+                <option value="">Park Type</option>
+            </select>
+            <select name="amenities">
+                <option value="">Amenities</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <!-- "Featured Parks & Recreation Blogs" Section with Carousel -->
+    <h2>Featured Parks & Recreation Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3>🌳 Hidden Gems</h3>
+            <p>Discover lesser-known parks across the state.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>⚽ Recreation Guide</h3>
+            <p>Find the best sports fields and play areas.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🏞️ Nature Trails</h3>
+            <p>Explore scenic walking, hiking, and biking paths.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>📍 Top Destinations</h3>
+            <p>Iconic state parks and recreation spots.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button -->
+    <div class="nav-buttons">
+        <p><a href="index.html" class="home-button">Return to Homepage</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" class="contact-button">Contact Us</a></p>
+        <p>© 2025 PNW Outdoor Adventures</p>
+    </footer>
 
 </body>
 </html>
