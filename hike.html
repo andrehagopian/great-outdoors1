@@ -2,59 +2,327 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<title>Hiking Adventures</title>
-<link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-<script src="scripts/myscripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Trails - Hiking Adventure</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f5;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #1b5e20;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #e0f2e9;
+        }
+		
+		/* Search Bar */
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1b5e20;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 180px;
+        }
+
+        .search-container button {
+            padding: 8px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-container button:hover {
+            background-color: #2e7d32;
+        }
+
+        #searchResult {
+            color: #1b5e20; /* Dark green */
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            margin: 30px auto;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1b5e20;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #388e3c;
+        }
+
+        .home-button:hover {
+            background-color: #e0f2e9;
+        }
+
+        /* Hiking Description Section */
+        .description-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .description-container h2 {
+            color: #1b5e20;
+            font-size: 24px;
+        }
+
+        .description-container p {
+            font-size: 18px;
+            color: #155724;
+        }
+
+        /* Placeholder Image */
+        .image-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Filter Section */
+        .filter-container {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #1b5e20;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #388e3c;
+            border-radius: 5px;
+        }
+
+        .filter-container button {
+            padding: 8px 16px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-container button:hover {
+            background-color: #2e7d32;
+        }
+
+        /* Hiking Blogs Carousel */
+        .carousel-container {
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .carousel-container .detail-box {
+            display: inline-block;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            background-color: #d0e8d6;
+            border: 2px solid #388e3c;
+            margin: 10px;
+        }
+
+        .carousel-container .detail-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-box h3 {
+            color: #1b5e20;
+            font-size: 20px;
+        }
+
+        .detail-box p {
+            font-size: 14px;
+            color: #155724;
+        }
+
+        .detail-box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        .detail-box a:hover {
+            color: #388e3c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            padding: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1b5e20;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 2px solid #388e3c;
+        }
+
+        .contact-button:hover {
+            background-color: #e0f2e9;
+        }
+
+    </style>
 </head>
 <body>
 
-<h1>Explore the Mist & Mountains</h1>
+    <!-- Header -->
+    <header>
+        <h1>Mountain Trails - Hiking Adventure</h1>
+        <p>Embark on unforgettable hikes through lush forests and stunning peaks.</p>
+    </header>
 
-<img src = "images/ferry.jpg" alt="Ferry" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-<figcaption>Trail away</figcaption>
+    <!-- Search Bar -->
+	<input type="text" id="searchInput" placeholder="Search this page...">
+	<button onclick="searchFunction()">Search</button>
+	<p id="searchResult"></p>
+	
+    <script>
+        function searchFunction() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const bodyText = document.body.innerText.toLowerCase();
+            const result = document.getElementById("searchResult");
 
-<p id="alttext" style="font-size: 20px"></p>
-
-<input type="text" id="searchInput" placeholder="Search this page...">
-<button onclick="searchFunction()">Search</button>
-<p id="searchResult"></p>
-
-<p id="alttext" style="font-size: 20px"></p>
-
-<section>
-    <h2>Discover Washington's Hiking Activities</h2>
-    <p>Experience breathtaking mountain vistas to quiet coastal routes and vibrant city greenways, every trail invites you to immerse yourself in nature and adventure at your own pace.
-	   Trek through the rugged peaks of national parks, explore the serene forests of state trails, or stroll scenic urban paths, hiking in the Pacific Northwest offers an incredible 
-	   variety of landscapes and experiences. 
-	</p>
-
-    <ul>
-        <li><strong>National Parks:</strong> Notable national parks within Washington state include, Mount Rainier National Park, Olympic National Park, and North Cascades National Park.</li>
-        <li><strong>State Parks:</strong> Notable Washington state parks include, Deception Pass State Park, Lake Wenatchee State Park, and Palouse Falls State Park.</li>
-        <li><strong>City Parks:</strong> Notable city parks within Washington include, Discovery Park Loop Trail, Dune Peninsula Trail, and Riverfront Park Trails.</li>
-    </ul>
-</section>
-<nav>
-<ul>
-<li><a href="index.html">Table of Contents</a></li>
-</ul>
-</nav>
-
-<script>
-    function searchFunction() {
-        const input = document.getElementById("searchInput").value.toLowerCase();
-        const bodyText = document.body.innerText.toLowerCase();
-        const result = document.getElementById("searchResult");
-
-        if (input.trim() === "") {
-            result.innerText = "Please enter a keyword.";
-        }else if (bodyText.includes(input)) {
-            result.innerText = `The term "${input}" was found on this page.`;
-        } else {
-            result.innerText = `No results found for "${input}".`;
+            if (input.trim() === "") {
+                result.innerText = "Please enter a keyword.";
+            } else if (bodyText.includes(input)) {
+                result.innerText = `The term "${input}" was found on this page.`;
+            } else {
+                result.innerText = `No results found for "${input}".`;
+            }
         }
-}
-</script>
+    </script>
+
+    <!-- "Discover Stunning Trails" Description -->
+    <div class="description-container">
+        <h2>Discover Stunning Trails</h2>
+        <p>From breathtaking alpine vistas to peaceful forest walks, Washington offers endless trails to explore. Whether you’re a beginner or an expert, there’s a hike waiting for you.</p>
+    </div>
+
+    <!-- Placeholder Image -->
+    <div class="image-container">
+        <img src="images/New Images/hike pnw.jpg" alt="Hiking Adventure">
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+        <h2>Find Your Next Hike</h2>
+        <form action="#" method="GET">
+            <select name="accessibility">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city">
+                <option value="">City</option>
+            </select>
+            <select name="county">
+                <option value="">County</option>
+            </select>
+            <select name="difficulty">
+                <option value="">Difficulty Level</option>
+            </select>
+            <select name="zip-code">
+                <option value="">Zip Code</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <!-- "Featured Hiking Blogs" Section with Updated Descriptions -->
+    <h2>Featured Hiking Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3>🌱 Best Seasons</h3>
+            <p>Recommended hikes for each season.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🏔️ Difficulty Levels</h3>
+            <p>How hike levels are determined.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🎒 Recommended Gear</h3>
+            <p>Come prepared for each hiking level.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🚶‍♂️ Popular Trails</h3>
+            <p>A spotlight on our favorite hikes.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button (Below Hiking Details) -->
+    <div class="nav-buttons">
+        <p><a href="index.html" class="home-button">Return to Homepage</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" target="_blank" class="contact-button">Contact Us</a></p>
+        <p>© 2025 PNW Outdoor Adventures</p>
+    </footer>
 
 </body>
 </html>
