@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Paddle Routes - Kayaking Adventure</title>
     <title>Paddle Routes - Kayaking Adventure</title>
     <style>
         /* General Styling */
@@ -233,6 +234,17 @@
 
     <!-- Header -->
     <header>
+        <h1 id="main-heading">Paddle Routes - Kayaking Adventure</h1>
+        <p class="intro-text">Explore Washington's stunning waters and hidden coastal treasures.</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search this page...">
+        <button onclick="searchFunction()">Search</button>
+        <p id="searchResult"></p>
+    </div>
+
         <h1>Paddle Routes - Kayaking Adventure</h1>
         <p>Explore Washington's stunning waters and hidden coastal treasures.</p>
     </header>
@@ -258,6 +270,10 @@
         }
     </script>
 
+    <!-- Description Section -->
+    <div class="description-container">
+        <h2 class="section-heading">Discover Kayaking Routes</h2>
+        <p class="section-text">From tranquil lake paddles to challenging river rapids, Washington offers a kayaking experience for all skill levels.</p>
     <!-- "Discover Kayaking Routes" Description -->
     <div class="description-container">
         <h2>Discover Kayaking Routes</h2>
@@ -271,6 +287,49 @@
 
     <!-- Filter Section -->
     <div class="filter-container">
+        <h2 class="section-heading">Find Your Next Kayaking Spot</h2>
+        <form action="#" method="GET">
+            <select name="accessibility" class="filter-dropdown">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city" class="filter-dropdown">
+                <option value="">City</option>
+            </select>
+            <select name="county" class="filter-dropdown">
+                <option value="">County</option>
+            </select>
+            <select name="difficulty" class="filter-dropdown">
+                <option value="">Difficulty Level</option>
+            </select>
+            <select name="zip-code" class="filter-dropdown">
+                <option value="">Zip Code</option>
+            </select>
+            <button type="submit" class="filter-button">Filter</button>
+        </form>
+    </div>
+
+    <!-- Featured Blogs -->
+    <h2 class="section-heading">Featured Kayaking Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🌊 Best Seasons</h3>
+            <p class="box-text">Ideal kayaking conditions for every season.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🛶 Equipment Guide</h3>
+            <p class="box-text">Essential gear for every type of kayaking trip.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🌿 Safety & Navigation</h3>
+            <p class="box-text">Tips for safe paddling and route planning.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">📍 Top Destinations</h3>
+            <p class="box-text">Unmissable kayaking spots in Washington.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button -->
         <h2>Find Your Next Kayaking Spot</h2>
         <form action="#" method="GET">
             <select name="accessibility">

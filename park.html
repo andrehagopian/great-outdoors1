@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Urban & Natural Parks - Recreation Adventure</title>
+    <style>
+           /* General Styling */
     <title>Urban & Natural Parks - Recreation Adventure</title>
     <style>
         /* General Styling */
@@ -225,13 +228,23 @@
         .contact-button:hover {
             background-color: #A7C7A3;
         }
-
     </style>
 </head>
 <body>
 
     <!-- Header -->
     <header>
+        <h1 id="main-heading">Urban & Natural Parks - Recreation Adventure</h1>
+        <p class="intro-text">Explore Washington’s parks, greenways, sports fields, and nature trails.</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search this page...">
+        <button onclick="searchFunction()">Search</button>
+        <p id="searchResult"></p>
+    </div>
+
         <h1>Urban & Natural Parks - Recreation Adventure</h1>
         <p>Explore Washington’s parks, greenways, sports fields, and nature trails.</p>
     </header>
@@ -257,6 +270,10 @@
         }
     </script>
 
+    <!-- Description Section -->
+    <div class="description-container">
+        <h2 class="section-heading">Discover Parks & Recreation</h2>
+        <p class="section-text">Whether enjoying a city plaza, hiking a forested trail, or playing on a sports field, Washington has diverse recreation areas to explore.</p>
 
     <!-- "Discover Parks & Recreation" Description -->
     <div class="description-container">
@@ -271,6 +288,45 @@
 
     <!-- Filter Section -->
     <div class="filter-container">
+        <h2 class="section-heading">Find Your Next Park Adventure</h2>
+        <form action="#" method="GET">
+            <select name="accessibility" class="filter-dropdown">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city" class="filter-dropdown">
+                <option value="">City</option>
+            </select>
+            <select name="county" class="filter-dropdown">
+                <option value="">County</option>
+            </select>
+            <select name="park-type" class="filter-dropdown">
+                <option value="">Park Type</option>
+            </select>
+            <select name="amenities" class="filter-dropdown">
+                <option value="">Amenities</option>
+            </select>
+            <button type="submit" class="filter-button">Filter</button>
+        </form>
+    </div>
+
+    <!-- Featured Blogs -->
+    <h2 class="section-heading">Featured Parks & Recreation Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🌳 Hidden Gems</h3>
+            <p class="box-text">Discover lesser-known parks across the state.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">⚽ Recreation Guide</h3>
+            <p class="box-text">Find the best sports fields and play areas.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🏞️ Nature Trails</h3>
+            <p class="box-text">Explore scenic walking, hiking, and biking paths.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">📍 Top Destinations</h3>
+            <p class="box-text">Iconic state parks and recreation spots.</p>
         <h2>Find Your Next Park Adventure</h2>
         <form action="#" method="GET">
             <select name="accessibility">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the Great Outdoors</title>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Welcome to the Great Outdoors</title>
+   <style>
         /* General Styling */
         body {
             font-family: Arial, sans-serif;
@@ -196,6 +196,92 @@
 </head>
 <body>
 
+  <!-- Header -->
+  <header>
+    <h1 id="main-heading">Welcome to the Great Outdoors</h1>
+    <p id="header-subtext">Your next adventure awaits here in Washington state!</p>
+  </header>
+
+  <!-- Search Bar -->
+  <input type="text" id="searchInput" placeholder="Search this page..." />
+  <button onclick="searchFunction()" id="search-button">Search</button>
+  <p id="searchResult"></p>
+
+  <!-- Image -->
+  <div class="image-container">
+    <img src="images/New Images/index3.jpg" alt="Pacific Northwest Nature Scene" />
+  </div>
+
+  <!-- Filter Section -->
+  <div class="filter-container" id="filter-section">
+    <h2 id="filter-heading">Explore Your Next Outdoor Adventure</h2>
+    <form action="#" method="GET">
+      <select name="activity-type" aria-label="Activity Type">
+        <option value="" id="filter-activity-type">Activity Type</option>
+      </select>
+      <select name="city" aria-label="City">
+        <option value="" id="filter-city">City</option>
+      </select>
+      <select name="county" aria-label="County">
+        <option value="" id="filter-county">County</option>
+      </select>
+      <select name="zip-code" aria-label="Zip Code">
+        <option value="" id="filter-zip">Zip Code</option>
+      </select>
+      <select name="season" aria-label="Season">
+        <option value="" id="filter-season">Season</option>
+      </select>
+      <select name="difficulty" aria-label="Difficulty Level">
+        <option value="" id="filter-difficulty">Difficulty Level</option>
+      </select>
+      <select name="accessibility" aria-label="Accessibility">
+        <option value="" id="filter-accessibility">Accessibility</option>
+      </select>
+      <button type="submit" id="filter-button">Filter</button>
+    </form>
+  </div>
+
+  <!-- Activities Section -->
+  <section>
+    <h2 id="activities-heading">Featured Activities</h2>
+    <p class="subtext" id="activities-subtext">Click on an activity to learn more</p>
+    <div class="activities">
+
+      <a href="beach.html" class="activity">
+        <div class="activity-icon">🏖️</div>
+        <strong id="beach-title">Coastal Getaways</strong>
+        <p id="beach-desc">Relax on scenic shores, explore tide pools, and enjoy breathtaking sunsets.</p>
+      </a>
+
+      <a href="hike.html" class="activity">
+        <div class="activity-icon">🥾</div>
+        <strong id="hike-title">Mountain Trails</strong>
+        <p id="hike-desc">Embark on unforgettable hikes through lush forests and stunning peaks.</p>
+      </a>
+
+      <a href="boat.html" class="activity">
+        <div class="activity-icon">🚤</div>
+        <strong id="boat-title">Waterway Adventures</strong>
+        <p id="boat-desc">Cruise along Washington’s lakes and rivers, discovering hidden gems.</p>
+      </a>
+
+      <a href="ferry.html" class="activity">
+        <div class="activity-icon">⛴️</div>
+        <strong id="ferry-title">Scenic Ferry Rides</strong>
+        <p id="ferry-desc">Travel across the Puget Sound with breathtaking views of the islands.</p>
+      </a>
+
+      <a href="kayak.html" class="activity">
+        <div class="activity-icon">🛶</div>
+        <strong id="kayak-title">Paddle Expeditions</strong>
+        <p id="kayak-desc">Kayak through serene waters, explore coastal caves, and spot wildlife.</p>
+      </a>
+
+      <a href="park.html" class="activity">
+        <div class="activity-icon">🌲</div>
+        <strong id="park-title">Nature Parks</strong>
+        <p id="park-desc">Immerse yourself in Washington’s diverse landscapes and natural beauty.</p>
+      </a>
     <!-- Header -->
     <header>
         <h1>Welcome to the Great Outdoors</h1>
@@ -228,78 +314,33 @@
         <img src="images/New Images/index3.jpg" alt="Pacific Northwest Nature Scene">
     </div>
 
-    <!-- Filter Section -->
-    <div class="filter-container">
-        <h2>Explore Your Next Outdoor Adventure</h2>
-        <form action="#" method="GET">
-            <select name="activity-type">
-                <option value="">Activity Type</option>
-            </select>
-            <select name="city">
-                <option value="">City</option>
-            </select>
-            <select name="county">
-                <option value="">County</option>
-            </select>
-            <select name="zip-code">
-                <option value="">Zip Code</option>
-            </select>
-            <select name="season">
-                <option value="">Season</option>
-            </select>
-            <select name="difficulty">
-                <option value="">Difficulty Level</option>
-            </select>
-            <select name="accessibility">
-                <option value="">Accessibility</option>
-            </select>
-            <button type="submit">Filter</button>
-        </form>
     </div>
+  </section>
 
-    <!-- Activities Section -->
-    <section>
-        <h2>Featured Activities</h2>
-        <p class="subtext">Click on an activity to learn more</p>
-        <div class="activities">
-            <a href="beach.html" class="activity">
-                <div class="activity-icon">🏖️</div>
-                <strong>Coastal Getaways</strong>
-                <p>Relax on scenic shores, explore tide pools, and enjoy breathtaking sunsets.</p>
-            </a>
-            <a href="hike.html" class="activity">
-                <div class="activity-icon">🥾</div>
-                <strong>Mountain Trails</strong>
-                <p>Embark on unforgettable hikes through lush forests and stunning peaks.</p>
-            </a>
-            <a href="boat.html" class="activity">
-                <div class="activity-icon">🚤</div>
-                <strong>Waterway Adventures</strong>
-                <p>Cruise along Washington’s lakes and rivers, discovering hidden gems.</p>
-            </a>
-            <a href="ferry.html" class="activity">
-                <div class="activity-icon">⛴️</div>
-                <strong>Scenic Ferry Rides</strong>
-                <p>Travel across the Puget Sound with breathtaking views of the islands.</p>
-            </a>
-            <a href="kayak.html" class="activity">
-                <div class="activity-icon">🛶</div>
-                <strong>Paddle Expeditions</strong>
-                <p>Kayak through serene waters, explore coastal caves, and spot wildlife.</p>
-            </a>
-            <a href="park.html" class="activity">
-                <div class="activity-icon">🌲</div>
-                <strong>Nature Parks</strong>
-                <p>Immerse yourself in Washington’s diverse landscapes and natural beauty.</p>
-            </a>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" class="contact-button" id="contact-button">Contact Us</a>
+    </p>
+    <p id="footer-copy">© 2025 PNW Outdoor Adventures</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p><a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" class="contact-button">Contact Us</a></p>
-        <p>© 2025 PNW Outdoor Adventures</p>
-    </footer>
+  <!-- Search Function Script -->
+  <script>
+    function searchFunction() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const bodyText = document.body.innerText.toLowerCase();
+      const result = document.getElementById("searchResult");
+
+      if (input.trim() === "") {
+        result.innerText = "Please enter a keyword.";
+      } else if (bodyText.includes(input)) {
+        result.innerText = `The term "${input}" was found on this page.`;
+      } else {
+        result.innerText = `No results found for "${input}".`;
+      }
+    }
+  </script>
 
 </body>
 </html>
