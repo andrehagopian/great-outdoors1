@@ -6,6 +6,9 @@
     <title id="page-title">Mountain Trails - Hiking Adventure</title>
     <style>
          /* General Styling */
+    <title>Mountain Trails - Hiking Adventure</title>
+    <style>
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f6f5;
@@ -226,7 +229,6 @@
         .contact-button:hover {
             background-color: #e0f2e9;
         }
-        
     </style>
 </head>
 <body>
@@ -244,6 +246,15 @@
         <p id="searchResult"></p>
     </div>
 
+        <h1>Mountain Trails - Hiking Adventure</h1>
+        <p>Embark on unforgettable hikes through lush forests and stunning peaks.</p>
+    </header>
+
+    <!-- Search Bar -->
+	<input type="text" id="searchInput" placeholder="Search this page...">
+	<button onclick="searchFunction()">Search</button>
+	<p id="searchResult"></p>
+	
     <script>
         function searchFunction() {
             const input = document.getElementById("searchInput").value.toLowerCase();
@@ -264,6 +275,10 @@
     <div class="description-container">
         <h2 class="section-heading">Discover Stunning Trails</h2>
         <p class="section-text">From breathtaking alpine vistas to peaceful forest walks, Washington offers endless trails to explore. Whether you’re a beginner or an expert, there’s a hike waiting for you.</p>
+    <!-- "Discover Stunning Trails" Description -->
+    <div class="description-container">
+        <h2>Discover Stunning Trails</h2>
+        <p>From breathtaking alpine vistas to peaceful forest walks, Washington offers endless trails to explore. Whether you’re a beginner or an expert, there’s a hike waiting for you.</p>
     </div>
 
     <!-- Placeholder Image -->
@@ -316,6 +331,49 @@
     </div>
 
     <!-- Return to Homepage Button -->
+        <h2>Find Your Next Hike</h2>
+        <form action="#" method="GET">
+            <select name="accessibility">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city">
+                <option value="">City</option>
+            </select>
+            <select name="county">
+                <option value="">County</option>
+            </select>
+            <select name="difficulty">
+                <option value="">Difficulty Level</option>
+            </select>
+            <select name="zip-code">
+                <option value="">Zip Code</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <!-- "Featured Hiking Blogs" Section with Updated Descriptions -->
+    <h2>Featured Hiking Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3>🌱 Best Seasons</h3>
+            <p>Recommended hikes for each season.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🏔️ Difficulty Levels</h3>
+            <p>How hike levels are determined.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🎒 Recommended Gear</h3>
+            <p>Come prepared for each hiking level.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🚶‍♂️ Popular Trails</h3>
+            <p>A spotlight on our favorite hikes.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button (Below Hiking Details) -->
     <div class="nav-buttons">
         <p><a href="index.html" class="home-button">Return to Homepage</a></p>
     </div>

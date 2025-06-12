@@ -6,6 +6,9 @@
     <title id="page-title">Coastal Shores - Beach Adventure</title>
     <style>
        /* General Styling */
+    <title>Coastal Shores - Beach Adventure</title>
+    <style>
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #F5F5F5;
@@ -242,6 +245,124 @@
         <button onclick="searchFunction()">Search</button>
         <p id="searchResult"></p>
     </div>
+
+        /* Filter Section */
+        .filter-container {
+            background-color: #E3F2FD;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #0E4D92;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #0E4D92;
+            border-radius: 5px;
+        }
+
+        .filter-container button {
+            padding: 8px 16px;
+            background-color: #0E4D92;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-container button:hover {
+            background-color: #063970;
+        }
+
+        /* Beach Blogs Carousel */
+        .carousel-container {
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .carousel-container .detail-box {
+            display: inline-block;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            background-color: #B0E0E6;
+            border: 2px solid #0E4D92;
+            margin: 10px;
+        }
+
+        .carousel-container .detail-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-box h3 {
+            color: #0E4D92;
+            font-size: 20px;
+        }
+
+        .detail-box p {
+            font-size: 12px; /* Adjusted for better fit */
+            color: #063970;
+        }
+
+        .detail-box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0E4D92;
+        }
+
+        .detail-box a:hover {
+            color: #063970;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0E4D92;
+            color: white;
+            padding: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #0E4D92;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .contact-button:hover {
+            background-color: #B0E0E6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Coastal Shores - Beach Adventure</h1>
+        <p>Relax on scenic shores, explore tide pools, and enjoy breathtaking sunsets.</p>
+    </header>
+	
+	<!-- Search Bar -->
+	<input type="text" id="searchInput" placeholder="Search this page...">
+	<button onclick="searchFunction()">Search</button>
+	<p id="searchResult"></p>
 	
     <script>
         function searchFunction() {
@@ -263,6 +384,8 @@
     <div class="description-container">
         <h2 class="section-heading">Discover Beach Destinations</h2>
         <p class="section-text">From quiet coastal hideaways to lively beachfronts, Washington offers a variety of sandy escapes to explore.</p>
+        <h2>Discover Beach Destinations</h2>
+        <p>From quiet coastal hideaways to lively beachfronts, Washington offers a variety of sandy escapes to explore.</p>
     </div>
 
     <!-- Placeholder Image -->
@@ -312,6 +435,46 @@
     </div>
 
     <!-- Return to Homepage -->
+        <h2>Find Your Next Beach Getaway</h2>
+        <form action="#" method="GET">
+            <select name="accessibility">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city">
+                <option value="">City</option>
+            </select>
+            <select name="county">
+                <option value="">County</option>
+            </select>
+            <select name="amenities">
+                <option value="">Amenities</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <!-- "Featured Beach Blogs" Section with Carousel -->
+    <h2>Featured Beach Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3>🌞 Best Seasons</h3>
+            <p>Top beach conditions throughout the year.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🏖️ Beach Safety</h3>
+            <p>How to stay safe and enjoy your time by the shore.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🌊 Hidden Gems</h3>
+            <p>Undiscovered beaches worth visiting.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>📍 Top Destinations</h3>
+            <p>Washington’s most breathtaking beach locations.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button -->
     <div class="nav-buttons">
         <p><a href="index.html" class="home-button">Return to Homepage</a></p>
     </div>

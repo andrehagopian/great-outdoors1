@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Scenic Transport - Ferry Adventure</title>
+    <title>Scenic Transport - Ferry Adventure</title>
     <style>
         /* General Styling */
         body {
@@ -67,6 +68,7 @@
 
         #searchResult {
             color: #2e7d32;
+            color: #2e7d32
             font-size: 14px;
             margin-top: 10px;
         }
@@ -242,6 +244,15 @@
         <p id="searchResult"></p>
     </div>
 
+        <h1>Scenic Transport - Ferry Adventure</h1>
+        <p>Experience breathtaking ferry rides across Washington’s iconic waterways.</p>
+    </header>
+
+    <!-- Search Bar -->
+	<input type="text" id="searchInput" placeholder="Search this page...">
+	<button onclick="searchFunction()">Search</button>
+	<p id="searchResult"></p>
+	
     <script>
         function searchFunction() {
             const input = document.getElementById("searchInput").value.toLowerCase();
@@ -262,6 +273,10 @@
     <div class="description-container">
         <h2 class="section-heading">Discover Ferry Routes</h2>
         <p class="section-text">Whether traveling across the Puget Sound or visiting scenic islands, Washington’s ferry system offers unforgettable journeys.</p>
+    <!-- "Discover Ferry Routes" Description -->
+    <div class="description-container">
+        <h2>Discover Ferry Routes</h2>
+        <p>Whether traveling across the Puget Sound or visiting scenic islands, Washington’s ferry system offers unforgettable journeys.</p>
     </div>
 
     <!-- Placeholder Image -->
@@ -307,6 +322,42 @@
         <a href="#" class="detail-box">
             <h3 class="box-heading">🌅 Sunset Rides</h3>
             <p class="box-text">Ferry routes with breathtaking views.</p>
+        <h2>Find Your Next Ferry Ride</h2>
+        <form action="#" method="GET">
+            <select name="accessibility">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="departure-port">
+                <option value="">Departure Port</option>
+            </select>
+            <select name="arrival-port">
+                <option value="">Arrival Port</option>
+            </select>
+            <select name="duration">
+                <option value="">Trip Duration</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <!-- "Featured Ferry Blogs" Section with Carousel -->
+    <h2>Featured Ferry Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3>🌊 Best Seasons</h3>
+            <p>Ideal conditions for a scenic ferry ride.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🚢 Ferry Tips</h3>
+            <p>How to prepare for a smooth journey.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>📍 Top Destinations</h3>
+            <p>Unmissable ferry routes in Washington.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🌅 Sunset Rides</h3>
+            <p>Ferry routes with breathtaking views.</p>
         </a>
     </div>
 

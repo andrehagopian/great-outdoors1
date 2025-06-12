@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Waterway Voyages - Boating Adventure</title>
+    <title>Waterway Voyages - Boating Adventure</title>
     <style>
         /* General Styling */
         body {
@@ -211,6 +212,153 @@
             padding: 20px;
         }
 
+
+        #searchResult {
+            color: #1b5e20; /* Dark green */
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            margin: 30px auto;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #0D47A1;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #0D47A1;
+        }
+
+        .home-button:hover {
+            background-color: #BBDEFB;
+        }
+
+        /* Boating Description Section */
+        .description-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #E3F2FD;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .description-container h2 {
+            color: #0D47A1;
+            font-size: 24px;
+        }
+
+        .description-container p {
+            font-size: 18px;
+            color: #0D47A1;
+        }
+
+        /* Placeholder Image */
+        .image-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Filter Section */
+        .filter-container {
+            background-color: #E3F2FD;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #0D47A1;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #0D47A1;
+            border-radius: 5px;
+        }
+
+        .filter-container button {
+            padding: 8px 16px;
+            background-color: #0D47A1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-container button:hover {
+            background-color: #002171;
+        }
+
+        /* Boating Blogs Carousel */
+        .carousel-container {
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .carousel-container .detail-box {
+            display: inline-block;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            background-color: #BBDEFB;
+            border: 2px solid #0D47A1;
+            margin: 10px;
+        }
+
+        .carousel-container .detail-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-box h3 {
+            color: #0D47A1;
+            font-size: 20px;
+        }
+
+        .detail-box p {
+            font-size: 12px; /* Adjusted for better fit */
+            color: #002171;
+        }
+
+        .detail-box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0D47A1;
+        }
+
+        .detail-box a:hover {
+            color: #002171;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0D47A1;
+            color: white;
+            padding: 20px;
+        }
+
         .contact-button {
             display: inline-block;
             background-color: #ffffff;
@@ -242,6 +390,15 @@
         <p id="searchResult"></p>
     </div>
 
+        <h1>Waterway Voyages - Boating Adventure</h1>
+        <p>Set sail on Washington’s lakes, rivers, and open waters.</p>
+    </header>
+
+	<!-- Search Bar -->
+	<input type="text" id="searchInput" placeholder="Search this page...">
+	<button onclick="searchFunction()">Search</button>
+	<p id="searchResult"></p>
+	
     <script>
         function searchFunction() {
             const input = document.getElementById("searchInput").value.toLowerCase();
@@ -262,6 +419,11 @@
     <div class="description-container">
         <h2 class="section-heading">Discover Boating Routes</h2>
         <p class="section-text">Whether you're navigating tranquil lakes or cruising along rushing rivers, Washington offers the perfect boating adventure.</p>
+
+    <!-- "Discover Boating Routes" Description -->
+    <div class="description-container">
+        <h2>Discover Boating Routes</h2>
+        <p>Whether you're navigating tranquil lakes or cruising along rushing rivers, Washington offers the perfect boating adventure.</p>
     </div>
 
     <!-- Placeholder Image -->
@@ -289,6 +451,24 @@
                 <option value="">Difficulty Level</option>
             </select>
             <button type="submit" class="filter-button">Filter</button>
+        <h2>Find Your Next Boating Spot</h2>
+        <form action="#" method="GET">
+            <select name="accessibility">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city">
+                <option value="">City</option>
+            </select>
+            <select name="county">
+                <option value="">County</option>
+            </select>
+            <select name="water-type">
+                <option value="">Water Type</option>
+            </select>
+            <select name="difficulty">
+                <option value="">Difficulty Level</option>
+            </select>
+            <button type="submit">Filter</button>
         </form>
     </div>
 
@@ -314,6 +494,27 @@
     </div>
 
     <!-- Return to Homepage -->
+    <h2>Featured Boating Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3>⚓ Best Seasons</h3>
+            <p>Ideal boating conditions for every season.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🚤 Safety & Navigation</h3>
+            <p>Boating tips for safe and smooth sailing.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>🌊 Water Conditions</h3>
+            <p>How currents, tides, and weather affect boating.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3>📍 Top Destinations</h3>
+            <p>Must-visit boating locations in Washington.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button -->
     <div class="nav-buttons">
         <p><a href="index.html" class="home-button">Return to Homepage</a></p>
     </div>
