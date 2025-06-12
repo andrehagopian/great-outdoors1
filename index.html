@@ -1,55 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Welcome to the Great Outdoors!</title>
-<link rel="stylesheet" type="text/css" href="styles/toplevel.css">
-<script src="scripts/myscripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Great Outdoors</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f5;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
+        /* Header */
+        header {
+            background-color: #1b5e20;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #e0f2e9;
+        }
+
+         /* Search Bar */
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1b5e20;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 180px;
+        }
+
+        .search-container button {
+            padding: 8px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-container button:hover {
+            background-color: #2e7d32;
+        }
+
+        #searchResult {
+            color: #1b5e20; /* Dark green */
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Placeholder Image */
+        .image-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Filter Section */
+        .filter-container {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #1b5e20;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #388e3c;
+            border-radius: 5px;
+        }
+
+        .filter-container button {
+            padding: 8px 16px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-container button:hover {
+            background-color: #2e7d32;
+        }
+
+        /* Activities Section */
+        section h2 {
+            margin-bottom: 5px;
+            font-size: 24px;
+            color: #1b5e20;
+        }
+
+        .subtext {
+            font-size: 16px;
+            color: #4c5c68;
+            margin-bottom: 15px;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .activity {
+            padding: 15px;
+            border: 2px solid #388e3c;
+            border-radius: 10px;
+            background-color: #e8f5e9;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 14px;
+        }
+
+        .activity:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .activity a {
+            display: block;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        .activity-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+            color: #1b5e20;
+        }
+
+        .activity p {
+            font-size: 12px;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            padding: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1b5e20;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .contact-button:hover {
+            background-color: #e0f2e9;
+        }
+    </style>
 </head>
-
 <body>
 
-<h1>Welcome to the Great Outdoors!</h1>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to the Great Outdoors</h1>
+        <p>Your next adventure awaits here in Washington state!</p>
+    </header>
 
-<img src = "images/outdoors.jpg" alt="Great Outdoors" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-<figcaption>Your Adventure Awaits!</figcaption>
+    <!-- Search Bar -->
+	<input type="text" id="searchInput" placeholder="Search this page...">
+	<button onclick="searchFunction()">Search</button>
+	<p id="searchResult"></p>
+	
+    <script>
+        function searchFunction() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const bodyText = document.body.innerText.toLowerCase();
+            const result = document.getElementById("searchResult");
 
-<p id="alttext" style="font-size:50px"></p>
-
-<input type="text" id="searchInput" placeholder="Search this page...">
-<button onclick="searchFunction()">Search</button>
-<p id="searchResult"></p>
-
-<ul>
-<li><a href="beach.html">Stroll on the Beach</a></li>
-<li><a href="hike.html">Enjoy a Peaceful Hike</a></li>
-<li><a href="boat.html">Explore by Boat</a></li>
-<li><a href="ferry.html">Ride the Ferry</a></li>
-<li><a href="kayak.html">Discover the Coast by Kayak</a></li>
-<li><a href="park.html">Read in the Park</a></li>
-</ul>
-
-<footer style = "text-align: center; padding: 20px; background-color: #f0f0f0;">
-    <p>Have questions or feedback?</p>
-    <a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" target="_blank">
-        Contact Us
-    </a>
-</footer>
-
-<script>
-    function searchFunction() {
-        const input = document.getElementById("searchInput").value.toLowerCase();
-        const bodyText = document.body.innerText.toLowerCase();
-        const result = document.getElementById("searchResult");
-
-        if (input.trim() === "") {
-            result.innerText = "Please enter a keyword.";
-        }else if (bodyText.includes(input)) {
-            result.innerText = `The term "${input}" was found on this page.`;
-        } else {
-            result.innerText = `No results found for "${input}".`;
+            if (input.trim() === "") {
+                result.innerText = "Please enter a keyword.";
+            } else if (bodyText.includes(input)) {
+                result.innerText = `The term "${input}" was found on this page.`;
+            } else {
+                result.innerText = `No results found for "${input}".`;
+            }
         }
-}
-</script>
+    </script>
+
+    <!-- Placeholder Image -->
+    <div class="image-container">
+        <img src="new images/index3.jpg" alt="Pacific Northwest Nature Scene">
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+        <h2>Explore Your Next Outdoor Adventure</h2>
+        <form action="#" method="GET">
+            <select name="activity-type">
+                <option value="">Activity Type</option>
+            </select>
+            <select name="city">
+                <option value="">City</option>
+            </select>
+            <select name="county">
+                <option value="">County</option>
+            </select>
+            <select name="zip-code">
+                <option value="">Zip Code</option>
+            </select>
+            <select name="season">
+                <option value="">Season</option>
+            </select>
+            <select name="difficulty">
+                <option value="">Difficulty Level</option>
+            </select>
+            <select name="accessibility">
+                <option value="">Accessibility</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <!-- Activities Section -->
+    <section>
+        <h2>Featured Activities</h2>
+        <p class="subtext">Click on an activity to learn more</p>
+        <div class="activities">
+            <a href="beach.html" class="activity">
+                <div class="activity-icon">🏖️</div>
+                <strong>Coastal Getaways</strong>
+                <p>Relax on scenic shores, explore tide pools, and enjoy breathtaking sunsets.</p>
+            </a>
+            <a href="hike.html" class="activity">
+                <div class="activity-icon">🥾</div>
+                <strong>Mountain Trails</strong>
+                <p>Embark on unforgettable hikes through lush forests and stunning peaks.</p>
+            </a>
+            <a href="boat.html" class="activity">
+                <div class="activity-icon">🚤</div>
+                <strong>Waterway Adventures</strong>
+                <p>Cruise along Washington’s lakes and rivers, discovering hidden gems.</p>
+            </a>
+            <a href="ferry.html" class="activity">
+                <div class="activity-icon">⛴️</div>
+                <strong>Scenic Ferry Rides</strong>
+                <p>Travel across the Puget Sound with breathtaking views of the islands.</p>
+            </a>
+            <a href="kayak.html" class="activity">
+                <div class="activity-icon">🛶</div>
+                <strong>Paddle Expeditions</strong>
+                <p>Kayak through serene waters, explore coastal caves, and spot wildlife.</p>
+            </a>
+            <a href="park.html" class="activity">
+                <div class="activity-icon">🌲</div>
+                <strong>Nature Parks</strong>
+                <p>Immerse yourself in Washington’s diverse landscapes and natural beauty.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" class="contact-button">Contact Us</a></p>
+        <p>© 2025 PNW Outdoor Adventures</p>
+    </footer>
+
 </body>
 </html>
