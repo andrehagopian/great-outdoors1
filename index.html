@@ -282,16 +282,7 @@
         <strong id="park-title">Nature Parks</strong>
         <p id="park-desc">Immerse yourself in Washington’s diverse landscapes and natural beauty.</p>
       </a>
-    <!-- Header -->
-    <header>
-        <h1>Welcome to the Great Outdoors</h1>
-        <p>Your next adventure awaits you here in Washington state!</p>
-    </header>
-
-    <!-- Search Bar -->
-	<input type="text" id="searchInput" placeholder="Search this page...">
-	<button onclick="searchFunction()">Search</button>
-	<p id="searchResult"></p>
+    </div>
 	
     <script>
         function searchFunction() {
@@ -309,14 +300,6 @@
         }
     </script>
 
-    <!-- Placeholder Image -->
-    <div class="image-container">
-        <img src="images/New Images/index3.jpg" alt="Pacific Northwest Nature Scene">
-    </div>
-
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
     <p>
@@ -325,22 +308,6 @@
     <p id="footer-copy">© 2025 PNW Outdoor Adventures</p>
   </footer>
 
-  <!-- Search Function Script -->
-  <script>
-    function searchFunction() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const bodyText = document.body.innerText.toLowerCase();
-      const result = document.getElementById("searchResult");
-
-      if (input.trim() === "") {
-        result.innerText = "Please enter a keyword.";
-      } else if (bodyText.includes(input)) {
-        result.innerText = `The term "${input}" was found on this page.`;
-      } else {
-        result.innerText = `No results found for "${input}".`;
-      }
-    }
-  </script>
 
 </body>
 </html>
