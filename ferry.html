@@ -2,54 +2,324 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<title id="page-title">Ferry Adventures</title>
-<link id rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-<script src="scripts/myscripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Scenic Transport - Ferry Adventure</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f5;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #004D40;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #B2DFDB;
+        }
+		
+		/* Search Bar */
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1b5e20;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 180px;
+        }
+
+        .search-container button {
+            padding: 8px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-container button:hover {
+            background-color: #2e7d32;
+        }
+
+        #searchResult {
+            color: #2e7d32;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            margin: 30px auto;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #004D40;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #004D40;
+        }
+
+        .home-button:hover {
+            background-color: #B2DFDB;
+        }
+
+        /* Ferry Description Section */
+        .description-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #E0F2F1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .description-container h2 {
+            color: #004D40;
+            font-size: 24px;
+        }
+
+        .description-container p {
+            font-size: 18px;
+            color: #00251A;
+        }
+
+        /* Placeholder Image */
+        .image-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Filter Section */
+        .filter-container {
+            background-color: #E0F2F1;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #004D40;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #004D40;
+            border-radius: 5px;
+        }
+
+        .filter-container button {
+            padding: 8px 16px;
+            background-color: #004D40;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-container button:hover {
+            background-color: #00251A;
+        }
+
+        /* Ferry Blogs Carousel */
+        .carousel-container {
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .carousel-container .detail-box {
+            display: inline-block;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            background-color: #B2DFDB;
+            border: 2px solid #004D40;
+            margin: 10px;
+        }
+
+        .carousel-container .detail-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-box h3 {
+            color: #004D40;
+            font-size: 20px;
+        }
+
+        .detail-box p {
+            font-size: 12px;
+            color: #00251A;
+        }
+
+        .detail-box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #004D40;
+        }
+
+        .detail-box a:hover {
+            color: #00251A;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004D40;
+            color: white;
+            padding: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #004D40;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .contact-button:hover {
+            background-color: #B2DFDB;
+        }
+    </style>
 </head>
 <body>
 
-<h1 id="main-heading">A Ferry Expedition</h1>
+    <!-- Header -->
+    <header>
+        <h1 id="main-heading">Scenic Transport - Ferry Adventure</h1>
+        <p class="intro-text">Experience breathtaking ferry rides across Washington’s iconic waterways.</p>
+    </header>
 
-<img src = "images/ferry.jpg" alt="Ferry" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-<figcaption id="figcaption-text">Underway</figcaption>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search this page...">
+        <button onclick="searchFunction()">Search</button>
+        <p id="searchResult"></p>
+    </div>
 
-<p id="alttext" style="font-size: 20px"></p>
+    <script>
+        function searchFunction() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const bodyText = document.body.innerText.toLowerCase();
+            const result = document.getElementById("searchResult");
 
-<input type="text" id="searchInput" placeholder="Search this page...">
-<button onclick="searchFunction()">Search</button>
-<p id="searchResult"></p>
-
-<section>
-    <h2 id="section-title">Discover Washington's Ferry Routes</h2>
-    <p id="section-description">Washington State Ferries provide stunning views of the Pacific Northwest and a unique way to see coastal areas.</p>
-
-    <ul>
-        <li id="ferry-brainbridge"><strong>Bainbridge Island Ferry:</strong> A scenic ride to a charming island town.</li>
-        <li id="ferry-vashon"><strong>Vashon Island Ferry:</strong> A ride to an island with nature trails and small beaches.</li>
-        <li id="ferry-bremerton"><strong>Bremerton Ferry:</strong> A longer trip that has amazing coastal views and access to museums.</li>
-    </ul>
-</section>
-<nav>
-<ul>
-<li><a id="nav-home" href="index.html">Back to Home</a></li>
-</ul>
-</nav>
-
-<script>
-    function searchFunction() {
-        const input = document.getElementById("searchInput").value.toLowerCase();
-        const bodyText = document.body.innerText.toLowerCase();
-        const result = document.getElementById("searchResult");
-
-        if (input.trim() === "") {
-            result.innerText = "Please enter a keyword.";
-        }else if (bodyText.includes(input)) {
-            result.innerText = `The term "${input}" was found on this page.`;
-        } else {
-            result.innerText = `No results found for "${input}".`;
+            if (input.trim() === "") {
+                result.innerText = "Please enter a keyword.";
+            } else if (bodyText.includes(input)) {
+                result.innerText = `The term "${input}" was found on this page.`;
+            } else {
+                result.innerText = `No results found for "${input}".`;
+            }
         }
-}
-</script>
+    </script>
+
+    <!-- Description Section -->
+    <div class="description-container">
+        <h2 class="section-heading">Discover Ferry Routes</h2>
+        <p class="section-text">Whether traveling across the Puget Sound or visiting scenic islands, Washington’s ferry system offers unforgettable journeys.</p>
+    </div>
+
+    <!-- Placeholder Image -->
+    <div class="image-container">
+        <img src="images/New Images/ferry pnw.jpg" alt="Scenic Ferry Journey">
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+        <h2 class="section-heading">Find Your Next Ferry Ride</h2>
+        <form action="#" method="GET">
+            <select name="accessibility" class="filter-dropdown">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="departure-port" class="filter-dropdown">
+                <option value="">Departure Port</option>
+            </select>
+            <select name="arrival-port" class="filter-dropdown">
+                <option value="">Arrival Port</option>
+            </select>
+            <select name="duration" class="filter-dropdown">
+                <option value="">Trip Duration</option>
+            </select>
+            <button type="submit" class="filter-button">Filter</button>
+        </form>
+    </div>
+
+    <!-- Featured Blogs -->
+    <h2 class="section-heading">Featured Ferry Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🌊 Best Seasons</h3>
+            <p class="box-text">Ideal conditions for a scenic ferry ride.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🚢 Ferry Tips</h3>
+            <p class="box-text">How to prepare for a smooth journey.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">📍 Top Destinations</h3>
+            <p class="box-text">Unmissable ferry routes in Washington.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🌅 Sunset Rides</h3>
+            <p class="box-text">Ferry routes with breathtaking views.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button -->
+    <div class="nav-buttons">
+        <p><a href="index.html" class="home-button">Return to Homepage</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" class="contact-button">Contact Us</a></p>
+        <p>© 2025 PNW Outdoor Adventures</p>
+    </footer>
 
 </body>
 </html>

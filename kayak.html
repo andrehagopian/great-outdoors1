@@ -2,54 +2,329 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<title id="page-title">Kayaking Adventures</title>
-<link rel="stylesheet" type="text/css" href="styles/branchlevel.css">
-<script src="scripts/myscripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Paddle Routes - Kayaking Adventure</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f5;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #1565C0;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #BBDEFB;
+        }
+		
+		/* Search Bar */
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1b5e20;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 180px;
+        }
+
+        .search-container button {
+            padding: 8px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-container button:hover {
+            background-color: #2e7d32;
+        }
+
+        #searchResult {
+            color: #00008B; /* Dark blue */
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            margin: 30px auto;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1565C0;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #1565C0;
+        }
+
+        .home-button:hover {
+            background-color: #BBDEFB;
+        }
+
+        /* Kayaking Description Section */
+        .description-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #E3F2FD;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .description-container h2 {
+            color: #1565C0;
+            font-size: 24px;
+        }
+
+        .description-container p {
+            font-size: 18px;
+            color: #0D47A1;
+        }
+
+        /* Placeholder Image */
+        .image-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Filter Section */
+        .filter-container {
+            background-color: #E3F2FD;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #1565C0;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            margin: 8px;
+            border: 2px solid #1565C0;
+            border-radius: 5px;
+        }
+
+        .filter-container button {
+            padding: 8px 16px;
+            background-color: #1565C0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-container button:hover {
+            background-color: #0D47A1;
+        }
+
+        /* Kayaking Blogs Carousel */
+        .carousel-container {
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .carousel-container .detail-box {
+            display: inline-block;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            background-color: #BBDEFB;
+            border: 2px solid #1565C0;
+            margin: 10px;
+        }
+
+        .carousel-container .detail-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-box h3 {
+            color: #1565C0;
+            font-size: 20px;
+        }
+
+        .detail-box p {
+            font-size: 12px; /* Adjusted for better fit */
+            color: #0D47A1;
+        }
+
+        .detail-box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #1565C0;
+        }
+
+        .detail-box a:hover {
+            color: #0D47A1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1565C0;
+            color: white;
+            padding: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1565C0;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 2px solid #1565C0;
+        }
+
+        .contact-button:hover {
+            background-color: #BBDEFB;
+        }
+
+    </style>
 </head>
 <body>
 
-<h1 id="main-heading">Explore the Ripples & Rapids</h1>
+    <!-- Header -->
+    <header>
+        <h1 id="main-heading">Paddle Routes - Kayaking Adventure</h1>
+        <p class="intro-text">Explore Washington's stunning waters and hidden coastal treasures.</p>
+    </header>
 
-<img src = "images/ferry.jpg" alt="Ferry" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-<figcaption id="figcaption-text">Paddle out</figcaption>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search this page...">
+        <button onclick="searchFunction()">Search</button>
+        <p id="searchResult"></p>
+    </div>
 
-<p id="alttext" style="font-size: 20px"></p>
+    <script>
+        function searchFunction() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const bodyText = document.body.innerText.toLowerCase();
+            const result = document.getElementById("searchResult");
 
-<input type="text" id="searchInput" placeholder="Search this page...">
-<button onclick="searchFunction()">Search</button>
-<p id="searchResult"></p>
-
-<section>
-    <h2 id="section-heading">Discover Washington's Kayaking Activities</h2>
-    <p id="section-description">Experience Washington’s stunning waterways, from tranquil lakes to rushing rivers and coastal inlets. Kayaking offers an unforgettable way to connect with nature while embracing adventure at your own pace.</p>
-
-    <ul>
-        <li id="bio-kayak"><strong>Bioluminescence Kayaking:</strong> Explore Whidbey Island, where nighttime paddles reveal glowing waters.</li>
-        <li id="glacier-kayak"><strong>Glacier Kayaking:</strong> Explore glacier-fed lakes like Lake Wenatchee, surrounded by breathtaking mountain scenery.</li>
-        <li id="wild-kayak"><strong>Wildlife Kayaking:</strong> Explore the San Juan Islands, famous for paddling alongside orcas, seals, and seabirds.</li>
-    </ul>
-</section>
-<nav>
-<ul>
-<li><a id="nav-home" href="index.html">Table of Contents</a></li>
-</ul>
-</nav>
-
-<script>
-    function searchFunction() {
-        const input = document.getElementById("searchInput").value.toLowerCase();
-        const bodyText = document.body.innerText.toLowerCase();
-        const result = document.getElementById("searchResult");
-
-        if (input.trim() === "") {
-            result.innerText = "Please enter a keyword.";
-        }else if (bodyText.includes(input)) {
-            result.innerText = `The term "${input}" was found on this page.`;
-        } else {
-            result.innerText = `No results found for "${input}".`;
+            if (input.trim() === "") {
+                result.innerText = "Please enter a keyword.";
+            } else if (bodyText.includes(input)) {
+                result.innerText = `The term "${input}" was found on this page.`;
+            } else {
+                result.innerText = `No results found for "${input}".`;
+            }
         }
-}
-</script>
+    </script>
+
+    <!-- Description Section -->
+    <div class="description-container">
+        <h2 class="section-heading">Discover Kayaking Routes</h2>
+        <p class="section-text">From tranquil lake paddles to challenging river rapids, Washington offers a kayaking experience for all skill levels.</p>
+    </div>
+
+    <!-- Placeholder Image -->
+    <div class="image-container">
+        <img src="images/New Images/kayak pnw.jpg" alt="Kayaking Adventure">
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+        <h2 class="section-heading">Find Your Next Kayaking Spot</h2>
+        <form action="#" method="GET">
+            <select name="accessibility" class="filter-dropdown">
+                <option value="">Accessibility</option>
+            </select>
+            <select name="city" class="filter-dropdown">
+                <option value="">City</option>
+            </select>
+            <select name="county" class="filter-dropdown">
+                <option value="">County</option>
+            </select>
+            <select name="difficulty" class="filter-dropdown">
+                <option value="">Difficulty Level</option>
+            </select>
+            <select name="zip-code" class="filter-dropdown">
+                <option value="">Zip Code</option>
+            </select>
+            <button type="submit" class="filter-button">Filter</button>
+        </form>
+    </div>
+
+    <!-- Featured Blogs -->
+    <h2 class="section-heading">Featured Kayaking Blogs</h2>
+    <div class="carousel-container">
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🌊 Best Seasons</h3>
+            <p class="box-text">Ideal kayaking conditions for every season.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🛶 Equipment Guide</h3>
+            <p class="box-text">Essential gear for every type of kayaking trip.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">🌿 Safety & Navigation</h3>
+            <p class="box-text">Tips for safe paddling and route planning.</p>
+        </a>
+        <a href="#" class="detail-box">
+            <h3 class="box-heading">📍 Top Destinations</h3>
+            <p class="box-text">Unmissable kayaking spots in Washington.</p>
+        </a>
+    </div>
+
+    <!-- Return to Homepage Button -->
+    <div class="nav-buttons">
+        <p><a href="index.html" class="home-button">Return to Homepage</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="https://forms.gle/Jk1W8gMR2ctqgDAz5" target="_blank" class="contact-button">Contact Us</a></p>
+        <p>© 2025 PNW Outdoor Adventures</p>
+    </footer>
 
 </body>
 </html>
